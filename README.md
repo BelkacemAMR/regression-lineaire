@@ -61,4 +61,16 @@ Après l'entraînement, le programme effectue une prédiction pour une nouvelle 
 new_x = np.array([6])
 predicted_y = model.predict(new_x.reshape(-1, 1))
 ```
+Le programme affiche ensuite les coefficients de la droite de régression et la prédiction pour la nouvelle valeur de `x` :
+
+```python
+# Affichage des coefficients de la droite de régression
+print('Coefficients : a =', model.coef_[0], ' b =', model.intercept_)
+
+# Affichage de la prédiction pour la nouvelle valeur de x
+print('Prediction for x =', new_x[0], ' : y =', predicted_y[0])
+```
+
+
+ 
 
