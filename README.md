@@ -70,6 +70,21 @@ print('Coefficients : a =', model.coef_[0], ' b =', model.intercept_)
 # Affichage de la prédiction pour la nouvelle valeur de x
 print('Prediction for x =', new_x[0], ' : y =', predicted_y[0])
 ```
+Enfin, le programme trace les points des données d'exemple, la droite de régression et le point prédit :
+
+```python
+# Affichage des données et de la droite de régression
+plt.scatter(x, y)
+plt.plot([min(x), max(x)], [model.predict([[min(x)]])[0], model.predict([[max(x)]])[0]], color='red')
+
+# Placement du point prédit en violet
+plt.scatter(new_x, predicted_y, color='purple')
+plt.show()
+```
+
+Vous verrez un graphique avec les points des données d'exemple, la droite de régression et le point prédit pour la nouvelle valeur de `x`.
+
+N'hésitez pas à modifier les données d'exemple ou à expérimenter avec différents ensembles de données pour observer la régression linéaire en action.
 
 
  
